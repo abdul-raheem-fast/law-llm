@@ -1,0 +1,17 @@
+# Law LLM - Required Dependencies
+# Install with: pip install -r requirements.txt
+
+# Vector database for storing and searching legal text chunks
+chromadb==0.5.23
+
+# Embedding model for converting text to vectors
+sentence-transformers==3.4.1
+
+# LLM API client for answer generation (free tier)
+groq==0.25.0
+
+# Web interface framework
+streamlit==1.45.1
+
+# Environment variable management (.env file support)
+python-dotenv==1.1.0
