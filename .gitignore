@@ -33,3 +33,10 @@ build/
 # Embeddings cache (large binary files)
 embeddings/
 *.pkl
+
+# Datasets and generated files
+data/**/*.html
+data/**/*.pdf
+data/**/*.txt
+data/*.csv
+data/*.md
