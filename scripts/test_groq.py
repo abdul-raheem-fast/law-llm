@@ -7,9 +7,11 @@ from dotenv import load_dotenv
 def main():
     print("Testing Groq API connectivity...")
 
+    # Load environment variables from .env before checking for the API key.
     load_dotenv()
     api_key = os.getenv("GROQ_API_KEY")
 
+    # Bail out early if the key is missing or still a placeholder value.
     if not api_key or api_key == "your_groq_api_key_here":
         print("ERROR: No valid GROQ_API_KEY found.")
         print("  Steps to fix:")
@@ -24,6 +26,7 @@ def main():
     try:
         from groq import Groq
 
+        # Create a client with the loaded key and send a short chat request.
         client = Groq(api_key=api_key)
 
         chat_completion = client.chat.completions.create(
@@ -45,12 +48,14 @@ def main():
         response = chat_completion.choices[0].message.content
         model_used = chat_completion.model
 
+        # Print the model and response so the script can be used as a quick smoke test.
         print(f"  Model: {model_used}")
         print(f"  Response: {response}")
         print("Groq API connection successful.")
         return 0
 
     except Exception as e:
+        # Surface any API or network error without hiding the original exception.
         print(f"API call failed: {e}")
         print("\n  Check your API key and internet connection.")
         return 1
