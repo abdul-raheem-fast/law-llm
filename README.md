@@ -4,7 +4,11 @@ A plain-English legal query application for laymen and lawyers, powered by Retri
 
 ## 🎯 Project Overview
 
-This application answers questions about Pakistani criminal law in **simple English**. It searches a curated database of verified legal texts and generates clear, cited answers using a language model — never guessing, always citing the exact Section or Article.
+This application answers questions about Pakistani criminal law. It searches a curated database of verified legal texts and generates clear, cited answers using a language model — never guessing, always citing the exact Section or Article.
+
+### 🌟 Advanced Features
+- **Bilingual Support (Urdu & English):** Users can query and receive plain-language explanations in both English and Urdu.
+- **Hybrid Search:** Combines semantic vector search (ChromaDB) with precise keyword matching (BM25) for high-accuracy legal retrieval.
 
 ### Legal Sources Covered
 | # | Legal Source | Coverage |
@@ -116,8 +120,10 @@ streamlit run app/app.py
 ---
 
 ## 👥 Team
-- **Project Lead:** Abdul Raheem
 - **Supervisor:** Dr. Aasim Qureshi, FAST-NUCES Lahore
+- Muhammad Abdul Raheem Khan — Team Lead
+- Ahmad Rasheed
+- Muhammad Aliyan Mumtaz
 
 ## 📄 License
 This project is for academic/research purposes under FAST-NUCES Lahore.
