@@ -30,13 +30,8 @@ desktop.ini
 dist/
 build/
 
-# Embeddings cache (large binary files)
-embeddings/
-*.pkl
+# Keep secrets and local env out of git
+.env
 
-# Datasets and generated files
-data/**/*.html
-data/**/*.pdf
-data/**/*.txt
-data/*.csv
-data/*.md
+# Large model cache (not project data)
+*.pkl
